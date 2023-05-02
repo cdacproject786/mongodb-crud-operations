@@ -1,0 +1,9 @@
+mongodb commands: 
+1. insert one ---> db.coll_name.insertOne()
+2. insert many ---> db.coll_name.insertMany()
+3. find one ----------> db.coll_name.findOne()
+4. find Many ----------> db.coll_name.findMany()
+5. update one ----------> db.coll_name.updateOne()
+6. update Many ----------> db.coll_name.updateMany()
+7. delete one ----------> db.coll_name.deleteOne()
+8. delete Many ----------> db.coll_name.deleteMany()
