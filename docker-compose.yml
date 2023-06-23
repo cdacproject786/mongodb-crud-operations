@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: student
+    ports:
+      - "27017:27017"
+    networks:
+      student-mongo-net:
+
+  springboot-restful-webservices:
+    container_name: springboot-mongo
+    image: arbaaz1602/mongodb:mongoapp
+    environment:
+      DB: mongodb
+    ports:
+      - "3500:3500"
+    depends_on:
+      - mongodb
+    networks:
+      student-mongo-net:
+    restart: on-failure
+
+networks:
+  student-mongo-net:

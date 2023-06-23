@@ -2,11 +2,10 @@ package com.mongocrud.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.FieldType;
-import org.springframework.data.mongodb.core.mapping.MongoId;
+import org.springframework.data.mongodb.core.mapping.*;
 
 @Document(collection = "students")
+@Sharded(shardKey = {"id"},shardingStrategy = ShardingStrategy.HASH)
 public class Student {
 
     @Transient

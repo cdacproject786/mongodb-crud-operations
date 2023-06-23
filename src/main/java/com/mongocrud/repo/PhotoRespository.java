@@ -1,9 +1,9 @@
 package com.mongocrud.repo;
 
-import com.mongocrud.model.Student;
+import com.mongocrud.model.Photo;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StudentRepository extends MongoRepository<Student,Long> {
+public interface PhotoRespository extends MongoRepository<Photo,String> {
 }
